@@ -1,0 +1,11 @@
+@import "../../assets/theme.module.scss";
+
+.calculator {
+    border-radius: 8px;
+    background-color: $brand-color;
+    padding: 32px;
+    box-sizing: border-box;
+    width: 75%;
+    max-width: 400px;
+    margin: -120px auto 60px;
+}

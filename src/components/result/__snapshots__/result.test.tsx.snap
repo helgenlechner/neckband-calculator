@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result Component renders a <p> with a sentence including the length rounded to one digit after the period 1`] = `
+<p>
+  The neck band needs to be 
+  3.1
+  cm long, including seam allowances.
+</p>
+`;
+
+exports[`Result Component renders null if the length is not defined 1`] = `null`;

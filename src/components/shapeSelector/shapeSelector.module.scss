@@ -1,0 +1,70 @@
+.container {
+    margin-bottom: 8px;
+
+    label {
+        display: block;
+    }
+
+    .shapeSelector {
+        display: flex;
+
+        > div {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .button {
+            flex-basis: 50%;
+            padding: 15px;
+            text-align: center;
+
+            &[data-selected=true] {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            &[data-selected=false] {
+                cursor: pointer;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                height: 50px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                border: 2px solid white;
+                margin: 0 auto 10px;
+            }
+        }
+
+        #circle {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+
+            &::before {
+                width: 50px;
+            }
+        }
+
+        #ellipse {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+
+            &::before {
+                width: 90px;
+            }
+        }
+
+        .separatorWrapper {
+            flex-basis: 1px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            height: 112px;
+
+            .separator {
+                background-color: rgba(255, 255, 255, .35);
+                height: calc(100% - 20px);
+                margin: 10px 0;
+            }
+        }
+    }
+}
