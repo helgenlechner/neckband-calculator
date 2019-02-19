@@ -30,7 +30,8 @@ export class CircleForm extends PureComponent<Props, State> {
       return;
     }
 
-    const innerDiameter = diameter - width;
+    const finishedNeckbandWidth = width / 2 - seamAllowance;
+    const innerDiameter = diameter - finishedNeckbandWidth;
     const innerCircumference = Math.PI * innerDiameter;
     const bandLength = innerCircumference + 2 * seamAllowance;
 

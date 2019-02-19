@@ -1,8 +1,9 @@
-@import "../../assets/theme.module.scss";
+@import "./theme.module.scss";
 
-.blue {
+.theme {
     background-color: $brand-color;
     color: $text-color;
     padding: 20px;
     height: calc(100vh - 56px);
+    font-family: 'Roboto', sans-serif;
 }
