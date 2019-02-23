@@ -18,8 +18,8 @@ export const calculateLength = (diameterOne: number, diameterTwo: number, seamAl
         return undefined;
     }
 
-    const neckHoleLongRadius = Math.max(diameterOne, diameterTwo) / 2;
-    const neckHoleShortRadius = Math.min(diameterOne, diameterTwo) / 2;
+    const neckHoleLongRadius = Math.max(diameterOne, diameterTwo) / 2 + seamAllowance;
+    const neckHoleShortRadius = Math.min(diameterOne, diameterTwo) / 2 + seamAllowance;
 
     const finishedNeckbandWidth = width / 2 - seamAllowance;
 

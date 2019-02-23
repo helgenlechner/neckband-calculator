@@ -1,41 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Input with knobs 1`] = `
-<p
-  className="container"
+<div
+  className="theme"
 >
-  <label>
-    A Label
-  </label>
-  <span
-    className="unit"
+  <p
+    className="container"
   >
-    <input
-      onChange={[Function]}
-      type="number"
-      value=""
-    />
-    cm
-  </span>
-</p>
+    <label>
+      A Label
+    </label>
+    <span
+      className="unit"
+    >
+      <input
+        onChange={[Function]}
+        type="number"
+        value=""
+      />
+      cm
+    </span>
+  </p>
+</div>
 `;
 
 exports[`Storyshots Input with text 1`] = `
-<p
-  className="container"
+<div
+  className="theme"
 >
-  <label>
-    A Label
-  </label>
-  <span
-    className="unit"
+  <p
+    className="container"
   >
-    <input
-      onChange={[Function]}
-      type="number"
-      value=""
-    />
-    cm
-  </span>
-</p>
+    <label>
+      A Label
+    </label>
+    <span
+      className="unit"
+    >
+      <input
+        onChange={[Function]}
+        type="number"
+        value=""
+      />
+      cm
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Storyshots Shape Selector with circle selected 1`] = `
+<div
+  className="theme"
+>
+  <div
+    className="container"
+  >
+    <label>
+      Shape
+    </label>
+    <div
+      className="shapeSelector"
+    >
+      <div
+        className="button"
+        data-selected={true}
+        id="circle"
+        onClick={[Function]}
+      >
+        Circle
+      </div>
+      <div
+        className="separatorWrapper"
+      >
+        <div
+          className="separator"
+        />
+      </div>
+      <div
+        className="button"
+        data-selected={false}
+        id="ellipse"
+        onClick={[Function]}
+      >
+        Ellipse
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Shape Selector with ellipse selected 1`] = `
+<div
+  className="theme"
+>
+  <div
+    className="container"
+  >
+    <label>
+      Shape
+    </label>
+    <div
+      className="shapeSelector"
+    >
+      <div
+        className="button"
+        data-selected={false}
+        id="circle"
+        onClick={[Function]}
+      >
+        Circle
+      </div>
+      <div
+        className="separatorWrapper"
+      >
+        <div
+          className="separator"
+        />
+      </div>
+      <div
+        className="button"
+        data-selected={true}
+        id="ellipse"
+        onClick={[Function]}
+      >
+        Ellipse
+      </div>
+    </div>
+  </div>
+</div>
 `;
