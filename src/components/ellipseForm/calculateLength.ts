@@ -2,7 +2,7 @@ export const calculateLength = (diameterOne: number, diameterTwo: number, seamAl
     if (
         diameterOne < 1
         || diameterTwo < 1
-        || seamAllowance <= 0
+        || seamAllowance < 1
         || width < 1
         || diameterOne === Infinity
         || diameterTwo === Infinity

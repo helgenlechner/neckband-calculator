@@ -79,9 +79,7 @@ export class Calculator extends PureComponent<{}, State> {
         </Form>
         {this.circleForm}
         {this.ellipseForm}
-        <Result
-          length={this.state.length}
-        />
+        <Result length={this.state.length} />
       </div>
     );
   }
