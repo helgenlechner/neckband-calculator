@@ -43,6 +43,7 @@ export class CircleForm extends PureComponent<Props, State> {
       <Form>
         <Input
           label="Diameter"
+          testId="circle-diameter"
           onValueChange={diameter => this.setState({ diameter })}
         />
       </Form>

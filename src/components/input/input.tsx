@@ -4,6 +4,7 @@ const styles = require('./input.module.scss');
 interface Props {
   label: string;
   onValueChange: (value: number) => void;
+  testId: string;
 }
 
 interface State {
@@ -48,6 +49,7 @@ export class Input extends PureComponent<Props, State> {
               type="number"
               value={this.state.value}
               onChange={this.onValueChange}
+              data-test-id={this.props.testId}
             />
             cm
         </span>

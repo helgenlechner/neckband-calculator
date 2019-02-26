@@ -70,10 +70,12 @@ export class Calculator extends PureComponent<{}, State> {
         <Form>
           <Input
             label="Neck Band Width"
+            testId="neck-band-width"
             onValueChange={width => this.setState({ width })}
           />
           <Input
             label="Seam Allowance"
+            testId="seam-allowance"
             onValueChange={seamAllowance => this.setState({ seamAllowance })}
           />
         </Form>

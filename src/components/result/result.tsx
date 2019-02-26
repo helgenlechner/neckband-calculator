@@ -13,7 +13,7 @@ export class Result extends PureComponent<Props> {
     }
 
     return (
-      <p>The neck band needs to be {length.toFixed(1)}cm long, including seam allowances.</p>
+      <p data-test-id="result">The neck band needs to be {length.toFixed(1)}cm long, including seam allowances.</p>
     );
   }
 }

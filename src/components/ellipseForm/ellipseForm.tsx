@@ -33,7 +33,7 @@ export class EllipseForm extends PureComponent<Props, State> {
       return;
     }
 
-    this.props.onLengthChange(calculateLength(diameterOne, diameterTwo, width, seamAllowance));
+    this.props.onLengthChange(calculateLength(diameterOne, diameterTwo, seamAllowance, width));
   }
 
   render () {
@@ -41,10 +41,12 @@ export class EllipseForm extends PureComponent<Props, State> {
       <Form>
         <Input
           label="Diameter 1"
+          testId="ellipse-diameter-one"
           onValueChange={diameterOne => this.setState({ diameterOne })}
         />
         <Input
           label="Diameter 2"
+          testId="ellipse-diameter-two"
           onValueChange={diameterTwo => this.setState({ diameterTwo })}
         />
       </Form>
