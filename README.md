@@ -30,6 +30,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `yarn sb`
 
 Runs Storybook.
+Open [http://localhost:9009](http://localhost:9009) to view it in the browser.
 
 ### `yarn run cypress open`
 
