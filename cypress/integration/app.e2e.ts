@@ -42,7 +42,7 @@ describe('App', () => {
             .should('have.text', 'The neck band needs to be 49.3cm long, including seam allowances.');
     });
 
-    it.skip('resets the form after selecting a different shape', () => {
+    it('resets the form after selecting a different shape', () => {
         cy.visit('http://localhost:3000/');
 
         cy.get('[data-test-id="shape-ellipse"]')

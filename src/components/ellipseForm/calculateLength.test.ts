@@ -37,7 +37,7 @@ describe('calculateLength', () => {
         expect(actual).toEqual(expected);
     });
 
-    it.skip.each([
+    it.each([
         [Infinity, 22, 1.5, 4.8],
         [14, Infinity, 1.5, 4.8],
         [14, 22, Infinity, 4.8],
@@ -48,7 +48,7 @@ describe('calculateLength', () => {
         expect(actual).toBeUndefined();
     });
 
-    it.skip('calculates the same length when diameter one and two are switched', () => {
+    it('calculates the same length when diameter one and two are switched', () => {
         const commutativeDiameters = property(
             gen.posNumber.notEmpty(),
             gen.posNumber.notEmpty(),
