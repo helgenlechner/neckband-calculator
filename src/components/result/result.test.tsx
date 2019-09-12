@@ -5,7 +5,7 @@ import { Result } from './result';
 describe('Result Component', () => {
     it('renders null if the length is not defined', () => {
         const tree = renderer
-            .create(<Result />)
+            .create(<Result length={undefined} />)
             .toJSON();
 
         expect(tree).toMatchSnapshot();
