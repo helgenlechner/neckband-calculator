@@ -26,9 +26,9 @@ describe('ShapeSelector Component', () => {
             />,
         );
 
-        expect(wrapper.find(`#ellipse`).prop('data-selected')).toEqual(true);
+        expect(wrapper.find(`[data-test-id="shape-ellipse"]`).prop('data-selected')).toEqual(true);
 
-        expect(wrapper.find(`#circle`).prop('data-selected')).toEqual(false);
+        expect(wrapper.find(`[data-test-id="shape-circle"]`).prop('data-selected')).toEqual(false);
     });
 
     it('should call onShapeChange when clicking a button', () => {
@@ -41,7 +41,7 @@ describe('ShapeSelector Component', () => {
             />,
         );
 
-        wrapper.find(`#ellipse`).simulate('click');
+        wrapper.find(`[data-test-id="shape-ellipse"]`).simulate('click');
 
         expect(onShapeChange).toHaveBeenCalledTimes(1);
         expect(onShapeChange).toHaveBeenCalledWith('ellipse');
@@ -57,7 +57,7 @@ describe('ShapeSelector Component', () => {
             />,
         );
 
-        wrapper.find(`#ellipse`).simulate('click');
+        wrapper.find(`[data-test-id="shape-ellipse"]`).simulate('click');
 
         expect(onShapeChange).toHaveBeenCalledTimes(0);
     });

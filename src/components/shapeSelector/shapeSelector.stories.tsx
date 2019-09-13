@@ -1,7 +1,6 @@
 import React from 'react';
-import { storiesOf, addDecorator } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { select } from '@storybook/addon-knobs';
 import { ShapeSelector } from './shapeSelector';
 import { describe, it, specs } from '../../../.storybook/facade';
 import { shallow } from 'enzyme';
@@ -10,17 +9,12 @@ import expect from 'expect';
 const themeStyles = require('../../assets/storybook-theme.module.scss');
 const componentStyles = require('./shapeSelector.module.scss');
 
-const shapeOptions = {
-    Circle: 'circle',
-    Ellipse: 'ellipse',
-};
-
 storiesOf('Shape Selector', module)
     .addDecorator(story => <div className={themeStyles.theme}>{story()}</div>)
     .add('with circle selected', () => {
         const story = (
             <ShapeSelector
-                selectedShape={shapeOptions.Circle}
+                selectedShape="circle"
                 onShapeChange={action('shape change')}
             />
         );
@@ -52,7 +46,7 @@ storiesOf('Shape Selector', module)
     .add('with ellipse selected', () => {
         const story = (
             <ShapeSelector
-                selectedShape={shapeOptions.Ellipse}
+                selectedShape="ellipse"
                 onShapeChange={action('shape change')}
             />
         );
