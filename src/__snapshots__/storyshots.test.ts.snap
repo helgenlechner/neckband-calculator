@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Input with knobs 1`] = `
+exports[`Storyshots Input With Knobs 1`] = `
 <div
   className="theme"
 >
@@ -14,6 +14,7 @@ exports[`Storyshots Input with knobs 1`] = `
       className="unit"
     >
       <input
+        data-test-id="knobs"
         onChange={[Function]}
         type="number"
         value=""
@@ -24,7 +25,7 @@ exports[`Storyshots Input with knobs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with text 1`] = `
+exports[`Storyshots Input With Text 1`] = `
 <div
   className="theme"
 >
@@ -38,6 +39,7 @@ exports[`Storyshots Input with text 1`] = `
       className="unit"
     >
       <input
+        data-test-id="label"
         onChange={[Function]}
         type="number"
         value=""
@@ -48,7 +50,7 @@ exports[`Storyshots Input with text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Shape Selector with circle selected 1`] = `
+exports[`Storyshots Shape Selector With Circle Selected 1`] = `
 <div
   className="theme"
 >
@@ -64,7 +66,7 @@ exports[`Storyshots Shape Selector with circle selected 1`] = `
       <div
         className="button"
         data-selected={true}
-        data-test-id="shape-circle"
+        data-testid="shape-circle"
         id="circle"
         onClick={[Function]}
       >
@@ -80,7 +82,7 @@ exports[`Storyshots Shape Selector with circle selected 1`] = `
       <div
         className="button"
         data-selected={false}
-        data-test-id="shape-ellipse"
+        data-testid="shape-ellipse"
         id="ellipse"
         onClick={[Function]}
       >
@@ -91,7 +93,7 @@ exports[`Storyshots Shape Selector with circle selected 1`] = `
 </div>
 `;
 
-exports[`Storyshots Shape Selector with ellipse selected 1`] = `
+exports[`Storyshots Shape Selector With Ellipse Selected 1`] = `
 <div
   className="theme"
 >
@@ -107,7 +109,7 @@ exports[`Storyshots Shape Selector with ellipse selected 1`] = `
       <div
         className="button"
         data-selected={false}
-        data-test-id="shape-circle"
+        data-testid="shape-circle"
         id="circle"
         onClick={[Function]}
       >
@@ -123,7 +125,7 @@ exports[`Storyshots Shape Selector with ellipse selected 1`] = `
       <div
         className="button"
         data-selected={true}
-        data-test-id="shape-ellipse"
+        data-testid="shape-ellipse"
         id="ellipse"
         onClick={[Function]}
       >

@@ -8,5 +8,3 @@ configure(requireContext('../src', true, /\.stories\.tsx$/), module);
 
 addDecorator(withKnobs);
 addDecorator(withTheme);
-
-configure(req, module);
