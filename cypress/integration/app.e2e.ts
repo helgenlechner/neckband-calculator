@@ -2,7 +2,7 @@ describe('App', () => {
     it('calculates circular neckband length', () => {
         cy.visit('http://localhost:3000/');
 
-        cy.get('[data-test-id="shape-circle"]')
+        cy.get('[data-testid="shape-circle"]')
             .click()
             .should('have.data', 'selected', true);
 
@@ -22,7 +22,7 @@ describe('App', () => {
     it('calculates elliptical neckband length', () => {
         cy.visit('http://localhost:3000/');
 
-        cy.get('[data-test-id="shape-ellipse"]')
+        cy.get('[data-testid="shape-ellipse"]')
             .click()
             .should('have.data', 'selected', true);
 
@@ -45,7 +45,7 @@ describe('App', () => {
     it('resets the form after selecting a different shape', () => {
         cy.visit('http://localhost:3000/');
 
-        cy.get('[data-test-id="shape-ellipse"]')
+        cy.get('[data-testid="shape-ellipse"]')
             .click()
             .should('have.data', 'selected', true);
 
@@ -61,8 +61,8 @@ describe('App', () => {
         cy.get('[data-test-id="ellipse-diameter-two"]')
             .type('14');
 
-        cy.get('[data-test-id="shape-circle"]')
-            .click()
+        cy.get('[data-testid="shape-circle"]')
+            .click();
 
         cy.get('[data-test-id="neck-band-width"]')
             .should('have.value', '');
