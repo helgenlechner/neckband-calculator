@@ -1,53 +1,25 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import { Input } from './input';
-import { describe, it, specs } from '../../../.storybook/facade';
 
-const styles = require('../../assets/storybook-theme.module.scss');
+export default {
+    title: 'Input',
+    component: Input,
+};
 
-storiesOf('Input', module)
-    .addDecorator(story => <div className={styles.theme}>{story()}</div>)
-    .add('with text', () => (
-        <Input
-            label="A Label"
-            onValueChange={action('value change')}
-        />
-    ))
-    .add('with knobs', () => (
-        <Input
-            label={text('Label', 'A Label')}
-            onValueChange={action('value change')}
-        />
-    ))
-    .add('with specs', () => {
-        const story = (
-            <Input
-                label="A Label"
-                onValueChange={action('value change')}
-            />
-        );
+export const withText = () => (
+    <Input
+        label="A Label"
+        onValueChange={action('value change')}
+        testId="label"
+    />
+);
 
-        specs(() => describe('Input/with specs', () => {
-            it('should render a label', () => {
-                const wrapper = shallow(story);
-
-                expect(wrapper.find('label').text()).toEqual('A Label');
-            });
-
-            it('should render a number input', () => {
-                const wrapper = shallow(story);
-
-                expect(wrapper.find('input[type="number"]').length).toEqual(1);
-            });
-
-            it('should render units', () => {
-                const wrapper = shallow(story);
-
-                expect(wrapper.find('span').text()).toEqual('cm');
-            });
-        }));
-
-        return story;
-    });
+export const withKnobs = () => (
+    <Input
+        label={text('Label', 'A Label')}
+        onValueChange={action('value change')}
+        testId="knobs"
+    />
+);

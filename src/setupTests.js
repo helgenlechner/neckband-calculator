@@ -21,5 +21,3 @@ const customMatchers = {
 };
 
 expect.extend(customMatchers);
-
-jest.mock('../.storybook/facade');
