@@ -1,6 +1,3 @@
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
 const customMatchers = {
     toBeValidProperty(received) {
         if (received.result === true) {
@@ -26,5 +23,3 @@ const customMatchers = {
 expect.extend(customMatchers);
 
 jest.mock('../.storybook/facade');
-
-Enzyme.configure({ adapter: new Adapter() });

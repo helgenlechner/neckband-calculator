@@ -1,47 +1,38 @@
 import React from 'react';
+// add component to test
 import { ShapeSelector } from './shapeSelector';
-import { shallow } from 'enzyme';
+// add custom jest matchers from jest-dom
+import '@testing-library/jest-dom/extend-expect'
+// import react-testing methods
+import { render, fireEvent } from '@testing-library/react';
 
 describe('ShapeSelector Component', () => {
-    it('should render two buttons', () => {
-        const onShapeChange = jest.fn(shape => undefined);
-
-        const wrapper = shallow(
-            <ShapeSelector
-                selectedShape="circle"
-                onShapeChange={onShapeChange}
-            />,
-        );
-
-        expect(wrapper.find('.button').length).toEqual(2);
-    });
-
     it('should mark the button for the selectedShape as selected', () => {
         const onShapeChange = jest.fn(shape => undefined);
 
-        const wrapper = shallow(
+        const { getByTestId } = render(
             <ShapeSelector
                 selectedShape="ellipse"
                 onShapeChange={onShapeChange}
             />,
         );
 
-        expect(wrapper.find(`[data-test-id="shape-ellipse"]`).prop('data-selected')).toEqual(true);
+        expect(getByTestId('shape-ellipse')).toHaveAttribute('data-selected', 'true');
 
-        expect(wrapper.find(`[data-test-id="shape-circle"]`).prop('data-selected')).toEqual(false);
+        expect(getByTestId('shape-circle')).toHaveAttribute('data-selected', 'false');
     });
 
     it('should call onShapeChange when clicking a button', () => {
         const onShapeChange = jest.fn(shape => undefined);
 
-        const wrapper = shallow(
+        const { getByTestId } = render(
             <ShapeSelector
                 selectedShape="circle"
                 onShapeChange={onShapeChange}
             />,
         );
 
-        wrapper.find(`[data-test-id="shape-ellipse"]`).simulate('click');
+        fireEvent.click(getByTestId('shape-ellipse'));
 
         expect(onShapeChange).toHaveBeenCalledTimes(1);
         expect(onShapeChange).toHaveBeenCalledWith('ellipse');
@@ -50,14 +41,14 @@ describe('ShapeSelector Component', () => {
     it('should not call onShapeChange when the button is selected', () => {
         const onShapeChange = jest.fn(shape => undefined);
 
-        const wrapper = shallow(
+        const { getByTestId } = render(
             <ShapeSelector
                 selectedShape="ellipse"
                 onShapeChange={onShapeChange}
             />,
         );
 
-        wrapper.find(`[data-test-id="shape-ellipse"]`).simulate('click');
+        fireEvent.click(getByTestId('shape-ellipse'));
 
         expect(onShapeChange).toHaveBeenCalledTimes(0);
     });

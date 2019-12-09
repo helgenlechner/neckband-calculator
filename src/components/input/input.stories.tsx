@@ -1,11 +1,9 @@
 import React from 'react';
-import { storiesOf, addDecorator } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import { Input } from './input';
 import { describe, it, specs } from '../../../.storybook/facade';
-import { shallow } from 'enzyme';
-import expect from 'expect';
 
 const styles = require('../../assets/storybook-theme.module.scss');
 

@@ -25,7 +25,7 @@ export class ShapeSelector extends PureComponent<Props> {
                         className={styles.button}
                         id={styles.circle}
                         data-selected={this.props.selectedShape === 'circle'}
-                        data-test-id="shape-circle"
+                        data-testid="shape-circle"
                         onClick={() => this.onClick('circle')}
                     >
                         Circle
@@ -37,7 +37,7 @@ export class ShapeSelector extends PureComponent<Props> {
                         className={styles.button}
                         id={styles.ellipse}
                         data-selected={this.props.selectedShape === 'ellipse'}
-                        data-test-id="shape-ellipse"
+                        data-testid="shape-ellipse"
                         onClick={() => this.onClick('ellipse')}
                     >
                         Ellipse
