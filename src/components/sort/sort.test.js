@@ -35,7 +35,7 @@ describe('Sort', () => {
                     return result[index - 1] <= member;
                 })
             }
-        )
+        );
 
         expect(check(gteThanPrevious)).toBeValidProperty();
     });
@@ -44,7 +44,7 @@ describe('Sort', () => {
         const equalLength = property(
             gen.array(gen.number),
             (input) => sort(input).length === input.length
-        )
+        );
 
         expect(check(equalLength)).toBeValidProperty();
     });
@@ -57,7 +57,7 @@ describe('Sort', () => {
                 const result = sort(input);
                 input.every(member => result.includes(member));
             }
-        )
+        );
 
         expect(check(keepAllMembers)).toBeValidProperty();
     });
@@ -69,7 +69,7 @@ describe('Sort', () => {
                 const result = sort(input);
                 result.every(member => input.includes(member));
             }
-        )
+        );
 
         expect(check(dontAddMembers)).toBeValidProperty();
     });

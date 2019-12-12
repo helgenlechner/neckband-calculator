@@ -12,15 +12,6 @@ describe('calculateCircumference', () => {
         expect(actual).toEqual(expected);
     });
 
-    it.each([
-        [Infinity, 22],
-        [14, Infinity],
-    ])('returns undefined if any argument is Infinity', (diameterA, diameterB) => {
-        const actual = calculateCircumference(diameterA, diameterB);
-
-        expect(actual).toBeUndefined();
-    });
-
     it('calculates the same length when diameter one and two are switched', () => {
         const commutativeDiameters = property(
             gen.posNumber.notEmpty(),
@@ -29,5 +20,14 @@ describe('calculateCircumference', () => {
         );
 
         expect(check(commutativeDiameters)).toBeValidProperty();
+    });
+
+    it.each([
+        [Infinity, 22],
+        [14, Infinity],
+    ])('returns undefined if any argument is Infinity', (diameterA, diameterB) => {
+        const actual = calculateCircumference(diameterA, diameterB);
+
+        expect(actual).toBeUndefined();
     });
 });
